@@ -1,0 +1,115 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{siunitx}
+\usepackage[margin=2cm]{geometry}
+\usepackage[contents,nonumber]{cuisine}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,filecolor=blue,urlcolor=red,bookmarks=true,]{hyperref}
+
+% Necesario para remover el numerado dentro de las recetas.
+\usepackage{xpatch}
+\makeatletter
+\xpatchcmd{\Displ@ySt@p}{\arabic{st@pnumber}}{}{}{}
+\makeatother
+
+% Números en las footnotes
+\renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+
+\title{KISS cooking}
+\author{Lucas Collino}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\begin{abstract}
+
+\vspace*{3\baselineskip}
+
+Esto es una recopilación de recetas que me vuelan la peluca. Me cansé de mantener papeles garabateados que pierdo todo el tiempo.
+
+Cada receta se puede hacer de cero, sin ningún prerequisito y sin complicaciones innecesarias.
+
+Cada receta la rockea.
+
+La declaración de ingredientes es lo más explícita posible, trato de evitar medidas subjetivas.
+
+Comprate una balanza digital para pesar gramos. Dejate de joder.
+
+La última versión de este recetario se encuentra \href{https://github.com/lucascollino/kiss_cooking}{acá}.
+
+\vspace*{6\baselineskip}
+
+\begin{flushright}
+¡¡¡Vamos a opensourcear recetas!!!
+\end{flushright}
+
+\end{abstract}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\begin{recipe}{Pizza al molde (porque no existe otra)}{3-4 Pizzas}{\SI{120}{\minute}}
+  \ingredient[650]{\SI{}{\cubic\centi\metre}}{Agua}
+  \ingredient[50]{g}{Levadura}
+  \ingredient[7]{g}{Azúcar}
+  \textbf{Masa}
+
+  Medir el agua y entibiarla en el microondas. Desgranar el cubo de levadura en el agua, agregar el azúcar y revolver.
+
+  \ingredient[1]{kg}{Harina}
+  \ingredient[20]{g}{Sal}
+  \ingredient{}{Aceite de girasol}
+  Colocá el kg de harina y la sal en una olla, mezclalo.
+
+  Sumá el agua y mezclá hasta lograr una masa homogénea\footnote{Usá una sola mano.}.
+
+  Sacá la masa de la olla y amasá el tiempo que tengas ganas hasta que esté pareja. Espolvoreá con harina el bollo y metelo en la olla de nuevo, dejalo levar por \SI{45}{\minute}.
+
+  Dividí el bollo en tres\footnote{En cuatro si los moldes son chicos.} y estiralo en los moldes al \SI{50}{\percent}, dejalo descansar unos \SI{10}{\minute} (hacé la salsa), y estiralos al \SI{100}{\percent} del molde. Dejalos levar otros \SI{45}{\minute}.
+
+  \ingredient[1]{lata}{Tomate perita}
+  \ingredient[50]{ml}{Aceite de girasol}
+  \ingredient[7]{g}{Sal}
+  \ingredient[7]{g}{Azúcar}
+  \ingredient{}{Orégano}
+  \ingredient{}{Pimienta}
+  \ingredient{}{Paprika}
+
+  \textbf{Salsa}
+
+  En el mismo recipiente donde mediste el agua, poné el tomate perita, orégano, paprika y pimienta a gusto, junto con la sal, azúcar y el aceite. Licualo con una minipimer.
+
+  \ingredient[1.2]{kg}{Queso cremoso}
+  \textbf{Cocción}
+  
+  Las siguientes referencias son para un horno eléctrico de \SI{250}{\celsius} máximo, con resistencia inferior y superior, sin convección. Es importante que esto lo ajustes a tu horno (puede variar, y mucho).
+
+  Prendé el horno al máximo unos \SI{10}{\minute}.
+  
+  Repartí la salsa con una cuchara o cucharón grande.
+  
+  Mandá una pre-pizza -todavía sin el queso- en la bandeja superior del horno \SI{3}{\minute}, luego reemplazala con otra y a la que rotas mandála a la chapa de abajo para que se dore la base de la masa otros \SI{3}{\minute}.
+  
+  Cuando completan los dos ciclos les pones el queso.
+  
+  Una vez que ya está liberada la bandeja superior, mandá la primer pizza con el queso y dejala \SI{8}{\minute}, repetí con el resto. La base tiene que estar dorada y el queso fundido, burbujeando y dorándose.
+
+  \vspace*{1\baselineskip}
+  \textbf{Pro-tips}
+
+  \begin{enumerate}
+    \item[No uses moldes de aluminio] Es imposible que no se pegue la masa, y cuesta que se dore bien. Usa enlozadas o en su defecto teflón.
+    \item[Usa queso cremoso] Muzzarella va mejor con pizza a la piedra.
+    \item[Ponele salsa en los bordes] La combinación de salsa y queso en los bordes al quemarse es indescriptible.
+   \end{enumerate}
+
+\end{recipe}
+
+\end{document}
